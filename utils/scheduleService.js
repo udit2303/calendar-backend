@@ -5,7 +5,7 @@ const scheduleReminder = (userEmail, event) => {
   try {
     const { date, time } = event;
 
-    const eventDateTime = new Date(`${date.split(' ')[0]}T${time}Z`);  
+    const eventDateTime = new Date(`${date.toISOString().split('T')[0]}T${time}Z`);  
     if (isNaN(eventDateTime)) {
       console.error('Invalid event time:', eventDateTime);
       return;
