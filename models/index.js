@@ -23,7 +23,14 @@ sequelize
   .catch((error) => {
     console.error('Unable to connect to the database:', error);
   });
-
+  sequelize
+  .sync({ alter: true }) 
+  .then(() => {
+    console.log('Database synced successfully.');
+  })
+  .catch((err) => {
+    console.error('Error syncing database:', err);
+  });
 fs
   .readdirSync(__dirname)
   .filter(file => {
