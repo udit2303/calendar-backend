@@ -1,23 +1,20 @@
 {
   "development": {
-    "username": "udit2303",
-    "password": "admin",
-    "database": "udit2303",
-    "host": "localhost",
+    "use_env_variable": "DATABASE_URL",
     "dialect": "postgres"
   },
   "test": {
-    "username": "udit2303",
-    "password": "admin",
-    "database": "udit2303",
-    "host": "localhost",
+    "use_env_variable": "DATABASE_URL",
     "dialect": "postgres"
   },
   "production": {
-    "username": "udit2303",
-    "password": "admin",
-    "database": "udit2303",
-    "host": "localhost",
-    "dialect": "postgres"
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
