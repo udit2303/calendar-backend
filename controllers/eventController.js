@@ -37,7 +37,7 @@ const createEvent = async (req, res) => {
       userEmail,
     });
     scheduleReminder(userEmail, event);
-
+    console.log("Scheduled reminder for event");
     res.status(201).json(event);
   } catch (error) {
     console.error(error);
