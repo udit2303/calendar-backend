@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "udit2303",
+    "password": "admin",
+    "database": "udit2303",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "udit2303",
+    "password": "admin",
+    "database": "udit2303",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "udit2303",
+    "password": "admin",
+    "database": "udit2303",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
