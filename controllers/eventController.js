@@ -1,5 +1,6 @@
 const { Event, User } = require("../models");
 const { Op } = require("sequelize");
+const { scheduleReminder } = require('../utils/scheduleService');
 
 const getEvents = async (req, res) => {
   try {
@@ -35,6 +36,7 @@ const createEvent = async (req, res) => {
       description,
       userEmail,
     });
+    scheduleReminder(userEmail, event);
 
     res.status(201).json(event);
   } catch (error) {
