@@ -13,7 +13,7 @@ This is the backend API for managing event reminders. It allows users to log in,
 
 1. Clone the repository:
 
-   git clone https://github.com/udit2303/calendar-backend/.git
+   git clone https://github.com/udit2303/calendar-backend.git
    cd calendar-backend
 
 2. Install dependencies:
