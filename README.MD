@@ -13,8 +13,8 @@ This is the backend API for managing event reminders. It allows users to log in,
 
 1. Clone the repository:
 
-   git clone https://github.com/your-repo/event-reminder-backend.git
-   cd event-reminder-backend
+   git clone https://github.com/udit2303/calendar-backend/.git
+   cd calendar-backend
 
 2. Install dependencies:
 
@@ -201,6 +201,7 @@ The API returns appropriate HTTP status codes and error messages in case of fail
 
 ## Future Improvements
 - Add a relation for handling reminders, and load reminders based on that. (will work on after exams)
+- Fix Timezone Issues
 
 ## License
 
