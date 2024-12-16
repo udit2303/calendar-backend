@@ -27,7 +27,7 @@ const createEvent = async (req, res) => {
     if (!title || !date || !time || !endTime) {
       return res.status(400).json({ message: 'Title, date, time, and endTime are required' });
     }
-
+    console.log(date);
     const event = await Event.create({
       title,
       date,
@@ -49,7 +49,7 @@ const updateEvent = async (req, res) => {
   try {
     const eventId = req.params.id;
     const userEmail = req.user.email; 
-    const { title, date, time, endTime, description } = req.body;
+    const { title , time, endTime, description } = req.body;
 
     const event = await Event.findByPk(eventId);
 
@@ -63,7 +63,6 @@ const updateEvent = async (req, res) => {
 
     await event.update({
       title,
-      date,
       time,
       endTime,
       description,
@@ -83,20 +82,19 @@ const getEventsByMonthAndYear = async (req, res) => {
     if (!month || !year) {
       return res.status(400).json({ message: 'Month and year are required' });
     }
-
+  
     const events = await Event.findAll({
       where: {
         userEmail: userEmail,
         date: {
           [Op.between]: [
             new Date(`${year}-${month}-01`),
-            new Date(`${year}-${month}-31`),
+            new Date(`${year}-${month}-31T23:59:59`,),
           ],
         },
       },
     });
     
-   
     res.status(200).json(events);
   } catch (error) {
     console.error(error);
@@ -127,7 +125,6 @@ const getEventById = async (req, res) => {
 };
 const deleteEvent = async (req, res) => {
   try {
-    console.log(req.params)
     const userEmail = req.user.email; // Get the authenticated user's email from req.user
     const id = parseInt(req.params.id); // Get the event ID from query params
 

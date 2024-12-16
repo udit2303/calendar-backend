@@ -1,20 +1,26 @@
 {
   "development": {
-    "use_env_variable": "DATABASE_URL",
+    "username": "udit2303",
+    "password": "admin", 
+    "database": "udit2303", 
+    "host": "localhost",
+    "port": 5432,
     "dialect": "postgres"
   },
   "test": {
-    "use_env_variable": "DATABASE_URL",
+    "username": "udit2303",
+    "password": "admin", 
+    "database": "udit2303",
+    "host": "localhost",
+    "port": 5432,
     "dialect": "postgres"
   },
   "production": {
-    "use_env_variable": "DATABASE_URL",
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    }
+    "username": "udit2303",
+    "password": "admin", 
+    "database": "udit2303", 
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
   }
 }
