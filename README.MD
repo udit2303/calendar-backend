@@ -200,8 +200,8 @@ The API returns appropriate HTTP status codes and error messages in case of fail
 - `500 Internal Server Error`: General server error.
 
 ## Future Improvements
-- Add a relation for handling reminders, and load reminders based on that. (will work on after exams)
-- Fix Timezone Issues
+- Add a relation for handling reminders, and load reminders based on that. (will work on after exams) Done!
+- Fix Timezone Issues (Fixed a little bit?)
 
 ## License
 
